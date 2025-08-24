@@ -6,7 +6,7 @@ This project parses resumes (PDF/DOCX/TXT) into:
 ```
 
 ## Why this design?
-- **LLM‑first** (Gemini-1.25-flash) for higher accuracy in varied formats
+- **LLM‑first** (Gemini-1.5-flash) for higher accuracy in varied formats
 - **Reliable fallback** (regex + heuristics) if no API key or offline
 - **Modular code** that’s easy to extend and explain
 
