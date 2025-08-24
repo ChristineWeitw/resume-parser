@@ -1,0 +1,18 @@
+# venv & OS
+.venv/
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Env & secrets
+.env
+.env.local
+# VS Code (keep only if you want to share)
+.vscode/
