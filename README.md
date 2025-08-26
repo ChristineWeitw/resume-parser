@@ -25,13 +25,15 @@ Create virtual env with python>=3.11
    pip install -r requirements.txt
    python -m spacy download en_core_web_sm
    ```
-3. Open the notebook `resume_parser_v1.ipynb` and follow cells top to bottom.
+3. Open the notebook `resume_parser_v2_eval.ipynb` and follow cells top to bottom.
 4. To extend skills, add `skills.csv`.
 5. TO test example pdf or word file, add `sample_resume.pdf` or `sample_resume.docx` 
 
 ## Files
-- `resume_parser_v1.ipynb` — main notebook
-- `requirements.txt` - Python packages and their exact versions within the current environment 
+- `resume_parser_v2_eval.ipynb` — main notebook
+- `requirements.txt` - Python packages and their exact versions within the current environment
+- `output` - folder that includes outputs results from the parse_resume pipeline
+- `answer.jsonl` - file explicits the correct example resumes' results for evaluation purpose 
 - `skills.csv` — 
 Here we use the esco_skills.csv dataset from Kaggle to ensure the fallback works out of the box.(https://www.kaggle.com/datasets/thenoob69/esco-skills) 
 Optionally, you can extend it by pointing to your own CSV or TXT file.
