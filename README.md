@@ -53,30 +53,29 @@ Skills (relaxed): a gold skill counts as covered if ≥50% of its meaningful tok
 
 Create a file at the repo root named answer.jsonl. One JSON per line, with file, name, email, skills.
 Angle brackets <...> are allowed; the evaluator strips them automatically.
+   ```
+   {"file":"sample_resume1.pdf","name":"<Kristen Connely>","email":"<email@email.com>","skills":["Call Sheets & Sides","Adobe Premiere Pro","Camera Boom","Light Boom","Mic Boom","DaVinci Resolve"]}
+   ...
+   {"file":"sample_resume7.docx","name":"<JACKY WILSON>","email":"<example@resumeviking.com>","skills":["tools manufacturing","CNC machining","OSHA trained","Lathes Machines"]}
+   ```
 
-{"file":"sample_resume1.pdf","name":"<Kristen Connely>","email":"<email@email.com>","skills":["Call Sheets & Sides","Adobe Premiere Pro","Camera Boom","Light Boom","Mic Boom","DaVinci Resolve"]}
-...
-{"file":"sample_resume7.docx","name":"<JACKY WILSON>","email":"<example@resumeviking.com>","skills":["tools manufacturing","CNC machining","OSHA trained","Lathes Machines"]}
-
-
-It’s okay if you don’t have an entry for every sample (e.g., sample_resume5.*). The evaluator will skip missing ones.
 
 2) Generate predictions
 
 Run the notebook to produce outputs/*.json. Each prediction JSON must include:
+   ```
+   {
+   "file": "",
+   "name": "",
+   "email": "jane@example.com",
+   "skills": [],
 
-{
-  "file": "sample_resume1.pdf",
-  "name": "Jane Doe",
-  "email": "jane@example.com",
-  "skills": ["Python","LLM","NLP"],
-  "used_llm": true
-}
-
+   }
+   ```
 3) Run evaluation (drop-in notebook cell below)
 
-Case-insensitive comparisons for name/email
+   Case-insensitive comparisons for name/email
 
-Phrase-level strict metrics and relaxed, word-by-word coverage for skills
+   Phrase-level strict metrics and relaxed, word-by-word coverage for skills
 
-Adjustable threshold RELAXED_OVERLAP (default 0.50)
+   Adjustable threshold RELAXED_OVERLAP (default 0.50)
